@@ -88,6 +88,54 @@ public class DeleteOperations {
         curr.next=curr.next.next;
     }
 
+
+    // Delete Node position wise........
+    public static Node4 deleteNodePositionWise(int pos,Node4 head){
+        Node4 curr= head;
+
+        if(pos==1){
+            head=head.next;
+            return head;
+        }
+        for(int i=1;i<pos-1;i++){
+            if(curr==null||curr.next==null){
+                return head;
+            }
+            curr=curr.next;
+        }
+        curr.next=curr.next.next;
+        return head;
+    }
+
+
+
+//  remove nth node from end.............
+
+    public static Node4 removeNthFromEnd(Node4 head, int n) {
+        int size=0;
+        Node4 curr=head;
+        while(curr!=null){
+            size++;
+            curr=curr.next;
+        }
+        int pos=size-n;
+        System.out.println(size+".."+pos);
+        if(pos==1){
+            head=head.next;
+            return head;
+        }
+        for(int i=1;i<pos;i++){
+            if(curr==null || curr.next==null){
+                return head;
+            }
+            curr=curr.next;
+        }
+        curr.next=curr.next.next;
+        return head;
+    }
+
+
+
     //Method to Print LinkedList.........
     public static void printLinedList(Node4 head){
         Node4 curr=head;
@@ -107,8 +155,10 @@ public class DeleteOperations {
         head.next.next.next.next.next.next=new Node4(7);
 //        head=deleteFirstNode(head);
 //        deleteLastNode(head);
-        head=deleteNodeBeforeKey(0,head);
+        //head=deleteNodeBeforeKey(0,head);
         //deleteNodeAfterKey(90,head);
+        //head=deleteNodePositionWise(6,head);
+        head=removeNthFromEnd(head,3);
         printLinedList(head);
     }
 }
