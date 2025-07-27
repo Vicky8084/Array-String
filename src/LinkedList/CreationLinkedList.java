@@ -10,6 +10,8 @@ class Node1{
         this.next=null;
     }
 }
+
+
 public class CreationLinkedList {
     public static Node1 creationLinkedList(int data,Node1 head){
         Node1 nn=new Node1(data);
