@@ -53,7 +53,6 @@ public class ReverseList {
         }
         return prev; // new head
     }
-
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter limit for Node creation :- ");
