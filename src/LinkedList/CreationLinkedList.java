@@ -11,7 +11,6 @@ class Node1{
     }
 }
 
-
 public class CreationLinkedList {
     public static Node1 creationLinkedList(int data,Node1 head){
         Node1 nn=new Node1(data);
