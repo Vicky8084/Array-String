@@ -11,6 +11,7 @@ public class RemoveDuplicateFromSortedArray {
                     arr[j]=arr[j+1];
                 }
                 n--;
+                i--;
             }
         }
         for(int i=0;i<n;i++){
