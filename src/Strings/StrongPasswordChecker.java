@@ -66,12 +66,10 @@ public class StrongPasswordChecker {
         for(int i=0;i<password.length();i++){
             char ch=password.charAt(i);
             if(Character.isDigit(ch)) hasDigit=true;
-            else if(Character.isLowerCase(ch)) hasDigit=true;
             else if (Character.isUpperCase(ch)) hasUpper=true;
             else if("!@#$%^&*~`<,>.?/|}{".indexOf(ch)>=0) hasSpecial=true;
         }
 
-        return (hasDigit && hasLower && hasSpecial && hasSpecial);
     }
 
     public static void main(String[] args) {
@@ -84,6 +82,5 @@ public class StrongPasswordChecker {
         } else {
             System.out.println("This is NOT a strong password.");
         }
-        sc.close();
     }
 }
