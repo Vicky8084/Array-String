@@ -53,34 +53,34 @@ public class StrongPasswordChecker {
         return false;
     }
 
-    public static boolean isStrongPassword(String password){
-        if(password.length()<8){
-            return false;
-        }
-        if(containsDomain(password)){
-            return false;
-        }
-
-        boolean hasDigit=false, hasSpecial=false, hasUpper=false, hasLower=false;
-
-        for(int i=0;i<password.length();i++){
-            char ch=password.charAt(i);
-            if(Character.isDigit(ch)) hasDigit=true;
-            else if (Character.isUpperCase(ch)) hasUpper=true;
-            else if("!@#$%^&*~`<,>.?/|}{".indexOf(ch)>=0) hasSpecial=true;
-        }
-
-    }
+//    public static boolean isStrongPassword(String password){
+//        if(password.length()<8){
+//            return false;
+//        }
+//        if(containsDomain(password)){
+//            return false;
+//        }
+//
+//        boolean hasDigit=false, hasSpecial=false, hasUpper=false, hasLower=false;
+//
+//        for(int i=0;i<password.length();i++){
+//            char ch=password.charAt(i);
+//            if(Character.isDigit(ch)) hasDigit=true;
+//            else if (Character.isUpperCase(ch)) hasUpper=true;
+//            else if("!@#$%^&*~`<,>.?/|}{".indexOf(ch)>=0) hasSpecial=true;
+//        }
+//
+//    }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the password to check: ");
-        String password = sc.nextLine();
-
-        if (isStrongPassword(password)) {
-            System.out.println("This is a strong password!");
-        } else {
-            System.out.println("This is NOT a strong password.");
-        }
-    }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter the password to check: ");
+//        String password = sc.nextLine();
+//
+//        if (isStrongPassword(password)) {
+//            System.out.println("This is a strong password!");
+//        } else {
+//            System.out.println("This is NOT a strong password.");
+//        }
+      }
 }
